@@ -1,0 +1,20 @@
+{
+
+    "manifest_version": 2,
+    "name": "Stream Tweets",
+    "version": "1.0",
+  
+    "description": "browser extension that shows twitter live streams only .",
+  
+    "icons": {
+      "48": "icons/StreemTweets-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.twitter.com/*"],
+        "js": ["StreamTweets.js"]
+      }
+    ]
+  
+  }
