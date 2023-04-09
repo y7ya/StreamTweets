@@ -14,3 +14,6 @@ const observer = new MutationObserver(function (mutations, observer) {
   attributes: true,
 });
 
+function hasLive(node){
+  return node.outerHTML.includes('broadcasts');
+}
