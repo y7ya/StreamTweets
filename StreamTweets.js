@@ -15,5 +15,8 @@ const observer = new MutationObserver(function (mutations, observer) {
 });
 
 function hasLive(node){
-  return node.outerHTML.includes('broadcasts');
+  if(node.querySelector('video')){
+    return node.querySelector('video').poster.includes('pscp.tv');
+  }
+  return false
 }
