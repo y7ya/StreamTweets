@@ -9,12 +9,28 @@
     "icons": {
       "48": "icons/StreemTweets-48.png"
     },
-  
+    
+    "permissions": ["activeTab", "tabs", "storage", "<all_urls>", "webRequest"],
+
     "content_scripts": [
       {
         "matches": ["*://*.twitter.com/*"],
-        "js": ["StreamTweets.js"]
+        "js": ["StreamTweets.js"],
+        "css":["StreamTweets.css"]
       }
-    ]
-  
+    ],
+    
+    "browser_action":{
+      "default_popup": "popup/main.html"
+    },
+    
+    "background":{
+      "scripts":["popup/main.js"]
+    },
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "extension@streemTweets.com"
+      }
+    }
   }
