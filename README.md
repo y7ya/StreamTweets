@@ -3,5 +3,4 @@
 
 
 ToDo:
-* On/off button 
 * List streams in separate div 
